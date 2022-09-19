@@ -1,24 +1,18 @@
 
-public class TwoSum {
-	
-	public static int[] twoSum(int[] nums, int target) 
+public  int[] twoSum(int[] nums, int target) 
     {
-		int a,b;
-        int[] result = new int[2];
-		for(int i =0; i< nums.length; i++)
+		int len =nums.length;
+		for(int i =0; i< len-1; i++)
         {
-            for(int j=i+1; j< nums.length; j++)
+            for(int j=i+1; j< len-1; j++)
             {
-            	a=nums[i]+nums[j];
-            	if(a==target)
+            	if(nums[i]+nums[j]==target)
             	{
-            		result[0]= i;
-            		result[1]= j;
-            		return result;
+            		return new int[] {i,j};
             	}
             }
         }
-		return result;
+		throw new IllegalArgumentException("No Two Sum Solution!");
     }
 
 	public static void main(String[] args) 
@@ -34,8 +28,10 @@ public class TwoSum {
 		//int[] nums = {3,3};
 		//int target=6;
 		
-		 
-		System.out.println(java.util.Arrays.toString(twoSum(nums,target)));
+		 TwoSum ts= new TwoSum();
+		System.out.println(java.util.Arrays.toString(ts.twoSum(nums,target)));
 	}
 
 }
+
+	
