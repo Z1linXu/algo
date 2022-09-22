@@ -24,7 +24,7 @@ public class SearchInsertPosition
                     }
                     else if (target >nums[mid])
                     {
-                        if(target <nums[mid+1]||target ==nums[mid+1])
+                        if(target <nums[mid+1]||target ==nums[mid+1])//Have no idea ,just works
                         {
                             return mid+1;
                         }
