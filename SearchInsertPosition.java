@@ -1,6 +1,10 @@
 /*
 The reason why I choose Binary search is that the question tells us the exact range,
-and the target is an integer, so Binary search can perfectly used in this question.*/
+and the target is an integer, so Binary search can perfectly used in this question.
+Time Complexity: O(logN) Every looping divides the search region in half, 
+therefore it can be at most log n levels.
+Space Complexity: O(1) use one integer variables 'mid' to record the mid value.
+*/
 
 public class SearchInsertPosition 
 {
